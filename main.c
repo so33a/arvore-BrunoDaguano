@@ -48,8 +48,28 @@ int main () {
   x = busca(a, 45);
   if (x == NULL) 
     printf ("Nao achou\n");
-  else
+  else {
     printf ("Achou %d \n", x->key);
+    printf ("Remover %d \n", x->key);
+    remover(a, x->key);
+    printf ("\n");
+    printf ("em: ");
+    imprimeEmOrdem(a);
+    printf("\n");
+  }
+
+  x = busca(a, 77);
+  if (x == NULL) 
+    printf ("Nao achou\n");
+  else {
+    printf ("Achou %d \n", x->key);
+    printf ("Remover %d \n", x->key);
+    remover(a, x->key);
+    printf ("\n");
+    printf ("em: ");
+    imprimeEmOrdem(a);
+    printf("\n");
+  }
   
 
   x = busca(a, 1);
@@ -72,6 +92,10 @@ int main () {
 
    inserirNaRaiz(a, 46);
    printf ("Insere na Raiz o elemento 46\n");
+   imprimeEmLargura(a);
+   printf("\n");
+
+   destroiArvore(a);
    imprimeEmLargura(a);
    printf("\n");
 
